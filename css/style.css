@@ -1,0 +1,95 @@
+.span4 > div, .span8 > div, .span12 > div
+{
+   background-color:#fff;
+   border: 1px solid #888;
+   border-radius:3px;
+}
+
+.node circle {
+  cursor: pointer;
+  stroke: #000000;
+  stroke-width: 1px;
+}
+
+.node text {
+  font: 10px sans-serif;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+line.link {
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 1.5px;
+}
+
+/* map */
+svg {
+  font-family: Abel,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+}
+.tumor > rect {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+path {
+  fill: none;
+}
+.tumor, .node, .detail text, .all-tumors {
+  cursor: pointer;
+}
+.all-tumors {
+  fill: #aaa;
+}
+.detail a text:hover, text.all-tumors:hover {
+  text-decoration: underline;
+}
+#graph-info {
+  position: absolute;
+  width: 140px;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 10px;
+}
+
+/* references */
+#references h3 {
+  color: #999;
+}
+em.ref {
+  color: #999;
+  margin-left: 10px;
+}
+.ref-tumor a, .ref-tumor a:visited {
+  white-space: nowrap;
+  color: #999;
+}
+
+/* map */
+#map .leaflet-popup-content a {
+  display: block;
+  margin-top: 10px;
+  border-bottom: 1px solid transparent;
+}
+#map .leaflet-popup-content a:hover {
+  color: #000;
+  border-bottom-color: #0da4d3;
+}
+
+
+/*
+#offsetDiv {
+  margin-left: 100px;
+  margin-top: 100px;
+}
+*/
+
+
+#test1 {
+  margin: 0;
+}
+
+#test1 svg {
+  height: 500px;
+}
+
