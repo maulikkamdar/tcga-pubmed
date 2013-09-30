@@ -38,28 +38,29 @@ $term = $_GET['dataset'];
 
 switch($term) {
 	case "pubmed" : $query = "PREFIX pubmed:<http://bio2rdf.org/pubmed_vocabulary:>
-				PREFIX purl:<http://purl.org/dc/terms/>
-				SELECT DISTINCT ?s ?o ?title WHERE {
-					?s a <http://bio2rdf.org/pubmed_vocabulary:PubMedRecord>;
-					pubmed:relatedTo ?o; 
-					purl:title ?title.
-				}";
+							PREFIX purl:<http://purl.org/dc/terms/>
+							PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+							SELECT DISTINCT ?s ?o ?title WHERE {
+								?s a <http://bio2rdf.org/pubmed_vocabulary:PubMedRecord>;
+									pubmed:relatedTo ?o; 
+									purl:title ?title.
+							}";
 		$url = "http://virtuoso.srvgal85.deri.ie/sparql";
 		break;
 	case "pubmedAuthors" : $query = "PREFIX pubmed:<http://bio2rdf.org/pubmed_vocabulary:>
-					PREFIX purl:<http://purl.org/dc/terms/>
-					SELECT DISTINCT ?s ( CONCAT(?fore, \" \", ?last) AS ?author) WHERE {
-						?s pubmed:author ?author .
-						?author pubmed:fore_name ?fore ; 
-						pubmed:last_name ?last.
-					}";
+									PREFIX purl:<http://purl.org/dc/terms/>
+									SELECT DISTINCT ?s ( CONCAT(?fore, \" \", ?last) AS ?author) WHERE {
+										?s pubmed:author ?author .
+										?author pubmed:fore_name ?fore ; 
+											pubmed:last_name ?last.
+									}";
 		$url = "http://virtuoso.srvgal85.deri.ie/sparql";
 		break;
 	case "pubmedMeshTerms" : $query = "PREFIX pubmed:<http://bio2rdf.org/pubmed_vocabulary:>
-					PREFIX purl:<http://purl.org/dc/terms/>
-					SELECT ?s ?name WHERE {
-						?s pubmed:mesh_heading ?meshTerm . ?meshTerm pubmed:mesh_descriptor_name ?name
-					}";
+									PREFIX purl:<http://purl.org/dc/terms/>
+									SELECT DISTINCT ?s ?name WHERE {
+										?s pubmed:mesh_heading ?meshTerm; pubmed:relatedTo ?o . ?meshTerm pubmed:mesh_descriptor_name ?name
+									}";
 		$url = "http://virtuoso.srvgal85.deri.ie/sparql";
 		break;
 	case "pubmedResource" : $resource = $_GET['resource']; // http://linked2safety.deri.org/pubmed/19903095
@@ -84,68 +85,68 @@ switch($term) {
 		$url = "http://virtuoso.srvgal85.deri.ie/sparql";
 		break;
 	case "blcamethpatients" : $query = "SELECT DISTINCT * WHERE {
-						?patient <http://tcga.deri.ie/schema/bcr_patient_barcode> ?s
-					} LIMIT 5 OFFSET ".$_GET['offset'];
+											?patient <http://tcga.deri.ie/schema/bcr_patient_barcode> ?s
+										} LIMIT 5 OFFSET ".$_GET['offset'];
 		$url = "http://vmlion14.deri.ie/node43/8082/sparql";
 		break;
 	case "blcamethdata" : $query = "SELECT DISTINCT * WHERE  {
-						<".$_GET['patient']."> <http://tcga.deri.ie/schema/result> ?result.
-						?result <http://tcga.deri.ie/schema/chromosome> ?chromosome; 
-							<http://tcga.deri.ie/schema/position> ?pos; 
-							<http://tcga.deri.ie/schema/beta_value> ?value
-					} LIMIT 2000" ;
+										<".$_GET['patient']."> <http://tcga.deri.ie/schema/result> ?result.
+										?result <http://tcga.deri.ie/schema/chromosome> ?chromosome; 
+												<http://tcga.deri.ie/schema/position> ?pos; 
+												<http://tcga.deri.ie/schema/beta_value> ?value
+									} LIMIT 2000" ;
 		$url = "http://vmlion14.deri.ie/node43/8082/sparql";
 		break;
 	case "lamlmethpatients" : $query = "SELECT DISTINCT * WHERE {
-						?patient <http://tcga.deri.ie/schema/bcr_patient_barcode> ?s
-					} LIMIT 5 OFFSET ".$_GET['offset'];
+											?patient <http://tcga.deri.ie/schema/bcr_patient_barcode> ?s
+										} LIMIT 5 OFFSET ".$_GET['offset'];
 		$url = "http://vmlion14.deri.ie/node45/8082/sparql";
 		break;
 	case "lamlmethdata" : $query = "SELECT DISTINCT * WHERE  {
-						<".$_GET['patient']."> <http://tcga.deri.ie/schema/result> ?result.
-						?result <http://tcga.deri.ie/schema/chromosome> ?chromosome; 
-							<http://tcga.deri.ie/schema/position> ?pos; 
-							<http://tcga.deri.ie/schema/beta_value> ?value
-						} LIMIT 2000" ;
+										<".$_GET['patient']."> <http://tcga.deri.ie/schema/result> ?result.
+										?result <http://tcga.deri.ie/schema/chromosome> ?chromosome; 
+												<http://tcga.deri.ie/schema/position> ?pos; 
+												<http://tcga.deri.ie/schema/beta_value> ?value
+									} LIMIT 2000" ;
 		$url = "http://vmlion14.deri.ie/node45/8082/sparql";
 		break;
 	case "cescmethpatients" : $query = "SELECT DISTINCT * WHERE {
-						?patient <http://tcga.deri.ie/schema/bcr_patient_barcode> ?s
-					} LIMIT 5 OFFSET ".$_GET['offset'];
+											?patient <http://tcga.deri.ie/schema/bcr_patient_barcode> ?s
+										} LIMIT 5 OFFSET ".$_GET['offset'];
 		$url = "http://vmlion14.deri.ie/node43/8080/sparql";
 		break;
 	case "cescmethdata" : $query = "SELECT DISTINCT * WHERE  {
-						<".$_GET['patient']."> <http://tcga.deri.ie/schema/result> ?result.
-						?result <http://tcga.deri.ie/schema/chromosome> ?chromosome; 
-							<http://tcga.deri.ie/schema/position> ?pos; 
-							<http://tcga.deri.ie/schema/beta_value> ?value
-					} LIMIT 2000" ;
+										<".$_GET['patient']."> <http://tcga.deri.ie/schema/result> ?result.
+										?result <http://tcga.deri.ie/schema/chromosome> ?chromosome; 
+												<http://tcga.deri.ie/schema/position> ?pos; 
+												<http://tcga.deri.ie/schema/beta_value> ?value
+									} LIMIT 2000" ;
 		$url = "http://vmlion14.deri.ie/node43/8080/sparql";
 		break;
 	case "kirpmethpatients" : $query = "SELECT DISTINCT * WHERE {
-						?patient <http://tcga.deri.ie/schema/bcr_patient_barcode> ?s
-					} LIMIT 5 OFFSET ".$_GET['offset'];
+											?patient <http://tcga.deri.ie/schema/bcr_patient_barcode> ?s
+										} LIMIT 5 OFFSET ".$_GET['offset'];
 		$url = "http://vmlion14.deri.ie/node45/8080/sparql";
 		break;
 	case "kirpmethdata" : $query = "SELECT DISTINCT * WHERE  {
-						<".$_GET['patient']."> <http://tcga.deri.ie/schema/result> ?result.
-						?result <http://tcga.deri.ie/schema/chromosome> ?chromosome; 
-							<http://tcga.deri.ie/schema/position> ?pos; 
-							<http://tcga.deri.ie/schema/beta_value> ?value
-					} LIMIT 2000" ;
+										<".$_GET['patient']."> <http://tcga.deri.ie/schema/result> ?result.
+										?result <http://tcga.deri.ie/schema/chromosome> ?chromosome; 
+												<http://tcga.deri.ie/schema/position> ?pos; 
+												<http://tcga.deri.ie/schema/beta_value> ?value
+									} LIMIT 2000" ;
 		$url = "http://vmlion14.deri.ie/node45/8080/sparql";
 		break;
 	case "hnscmethpatients" : $query = "SELECT DISTINCT * WHERE {
-						?patient <http://tcga.deri.ie/schema/bcr_patient_barcode> ?s
-					} LIMIT 5 OFFSET ".$_GET['offset'];
+											?patient <http://tcga.deri.ie/schema/bcr_patient_barcode> ?s
+										} LIMIT 5 OFFSET ".$_GET['offset'];
 		$url = "http://vmlion14.deri.ie/node44/8080/sparql";
 		break;
 	case "hnscmethdata" : $query = "SELECT DISTINCT * WHERE  {
-						<".$_GET['patient']."> <http://tcga.deri.ie/schema/result> ?result.
-						?result <http://tcga.deri.ie/schema/chromosome> ?chromosome; 
-							<http://tcga.deri.ie/schema/position> ?pos; 
-							<http://tcga.deri.ie/schema/beta_value> ?value
-					} LIMIT 2000" ;
+										<".$_GET['patient']."> <http://tcga.deri.ie/schema/result> ?result.
+										?result <http://tcga.deri.ie/schema/chromosome> ?chromosome; 
+												<http://tcga.deri.ie/schema/position> ?pos; 
+												<http://tcga.deri.ie/schema/beta_value> ?value
+									} LIMIT 2000" ;
 		$url = "http://vmlion14.deri.ie/node44/8080/sparql";
 		break;						
 }
