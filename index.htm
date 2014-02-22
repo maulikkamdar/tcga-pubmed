@@ -6,58 +6,93 @@
 	<!-- Mobile viewport optimized -->
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<!-- Title -->
-	<title>Pubmed Integration with TCGA</title>
+	<title>Linked Cancer Genome Atlas Dashboard</title>
 	<!-- Stylesheet -->	
+  	<meta name="author" content="Maulik R. Kamdar">
+	<meta name="keywords" content="Maulik R. Kamdar, Muhammad Saleem, Shanmukha Sampath, Aftab Iqbal, Helena Deus, Stefan  Decker, Axel Cyrille,
+	Linked Data, Visualization, Human-Computer, Interaction, Semantic, Web, Technology, TCGA, Cancer, Genome, Atlas, Genomics, Data, Information
+	Digital, Enterprise, Research, Insight, Center, Analytics, Leipzig, Galway, AKSW" />
+	
+  	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  	<!--[if lt IE 9]>
+  	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+ 	<![endif]-->
+ 	
+ 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+	<link rel="stylesheet" href="css/search.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<link href="css/nv.d3.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="js/jquery.js"></script>
+	<link rel="stylesheet" href="css/slider.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+	
+	<!-- <script type="text/javascript" src="js/json2.js"></script>-->
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/ui/1.8.23/jquery-ui.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/libraries/sigma.min.js"></script>
+	<script type="text/javascript" src="js/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/libraries/bootstrap-multiselect.js"></script>
+	<script type="text/javascript" src="js/libraries/bootstrap-slider.js"></script>
+	<script type="text/javascript" src="js/libraries/d3.v3.min.js"></script>
+	<script type="text/javascript" src="js/libraries/sigma.forceatlas2.js"></script>
+	<script src="js/libraries/kinetic.min.js"></script>
+	
+	<script type="text/javascript" src="js/tcgaUtils.js"></script>
+	
+	<script type="text/javascript" src="http://maulikkamdar.cloudant.com/linkedtcga/_design/couchdb-xd/couchdb.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCd4u-UxPWFDuj_EanDBkzhcJhZijDGUG4&sensor=false"></script>
+	<script type="text/javascript" src="js/geoViz.js"></script>
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-47297724-1', 'deri.ie');
+	  ga('send', 'pageview');
+
+	</script>
 </head>
 
 <body>
 	<div class="navbar navbar-inverse">
 		<div class="navbar-inner">
-		        <div class="container-fluid">
-          			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          				<span class="icon-bar"></span>
-           				<span class="icon-bar"></span>
-           				<span class="icon-bar"></span>
-         			</button>
-          			<a class="brand" href="#">The Cancer Genome Atlas (TCGA) Dashboard</a>
-          			<div class="nav-collapse collapse">
-            				<ul class="nav">
-             					<li class="active"><a href="#">Home</a></li>
-              					<li><a href="#about">About</a></li>
-              					<li><a href="#contact">Contact</a></li>
-              					<li class="dropdown">
-                					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                					<ul class="dropdown-menu">
-                  						<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li class="divider"></li>
-								<li class="nav-header">Nav header</li>
-								<li><a href="#">Separated link</a></li>
-								<li><a href="#">One more separated link</a></li>
-                					</ul>
-              					</li>
-            				</ul>
-          			</div><!--/.nav-collapse -->
-        		</div>
-      		</div>
+		  	<div class="container-fluid">
+          		<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          			<span class="icon-bar"></span>
+           			<span class="icon-bar"></span>
+           			<span class="icon-bar"></span>
+         		</button>
+          		<a class="brand" href=".">Linked Cancer Genome Atlas (TCGA) Dashboard</a>
+          		<div class="nav-collapse collapse">
+            		<ul class="nav">
+            			<li class="active"><a href=".">Home</a></li>
+            			
+              			<li class="dropdown">
+                			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Help<b class="caret"></b></a>
+                			<ul class="dropdown-menu">
+                				<li><a href="javascript:showDiv('about')">About</a></li>
+                				<li class='divider'></li>
+                				<li class='disabled'><a tabindex="-1" href="#"><b>Perspectives</b></a></li>
+                				<li><a href="javascript:showDiv('persNetworkExplorer')">Network Explorer</a></li>
+								<li><a href="javascript:showDiv('persGeoViewer')">Geographical Viewer</a></li>
+								<!-- <li><a href="#">Faceted Browser</a></li>-->
+								<li><a href="javascript:showDiv('persGenomeBrowser')">Genome Browser</a></li>
+								<!-- <li><a href="#">Genomic Wheel</a></li>-->
+                			</ul>
+              			</li>
+              			<li><a href="javascript:showDiv('contactUs')">Feedback</a></li>
+              			<li><a href="http://tcga.deri.ie" target='_blank'>Linked TCGA</a></li>
+            		</ul>
+       			</div><!--/.nav-collapse -->
+       		</div>
     	</div>
+    </div>
 
-	<div class="container-fluid">
+	<div class="container-fluid" id="mainDiv">
 		<div class="row-fluid">
-			<div class="span8">
-				<div id="graph" align="center"><a href="javascript:allUpdate()"><img src="img/refresh.png" width="25px" height="25px" title="Visualize entire graph"></a>&nbsp;&nbsp;||&nbsp;&nbsp;<strong>Usage :</strong> Hover & Scroll, Double-Click &#8594; Zoom. <br><br></div>
-			</div>
-			<div class="span4">
-				<center><img src="img/tcga_logo.png"></center>
-				<br>
-				<div id="extraDetailPanel">
-					
-				</div>
+			<div class="span12" style="text-align:center">
+				<input id="autoComSearchBox" type="text" placeholder="Search"  dir="ltr" style="direction: ltr; text-align: left;">
+				<!--	<input type="submit" value="Submit" id="searchSubmitBtn" class="btn btn-primary btn-large"/> -->
 			</div>
 		</div>
 		<div class="row-fluid">
@@ -65,42 +100,181 @@
 				<br>
 				<div class="tabbable">
 					<ul class="nav nav-tabs">
-						<li class="active"><a href="#methylation" data-toggle="tab">Mehtylation Results</a></li>
-						<li><a href="#exon" data-toggle="tab">Exon Expression Results</a></li>
-						<li><a href="#clinic" data-toggle="tab">Clinical Trials</a></li>
+						<li class="active"><a href="#network" data-toggle="tab">Network Explorer</a></li>
+						<li><a href="#geo" data-toggle="tab">Geographical Viewer</a></li>
+						<!--<li><a href="#methylation" data-toggle="tab">Methylation Scatter</a></li>-->
+						<li><a href="#track" data-toggle="tab">Genome Browser</a></li>
 					</ul>
 					<div class="tab-content">
-						<div id="methylation" class="tab-pane active fade in">
-							<div id="offsetDiv">
-				 				<div id="test1" class='with-3d-shadow with-transitions'>
-				    				<svg></svg>
-				  				</div>
+						<div id="network" class="tab-pane active fade in">
+							<div class="span8 sigmaViz-parent" id="sigmaViz-parent">
+								<div class="netC" align="center"><a href="javascript:allUpdate()"><img src="img/refresh.png" width="25px" height="25px" title="Visualize entire graph"></a>
+								&nbsp;&nbsp;||&nbsp;&nbsp;<strong>Usage :</strong> Hover & Scroll &#8594; Zoom.</div>
+								<div id="sigmaViz" class="sigmaViz"></div>
+							</div>
+							<div class="span4">
+								<center><img src="img/tcga_logo.png"></center>
+								<br>
+								<div id="extraDetailPanel"></div>
 							</div>
 						</div>
-						<div id="exon" class="tab-pane fade"></div>
-						<div id="clinic" class="tab-pane fade"></div>
+						<div id="geo" class="tab-pane fade">
+							 <div id="map-canvas" class="span12"></div>
+						</div>
+						<div id="methylation" class="tab-pane fade">
+							<select id="patientList"></select>
+							<div id="methylationScatter-canvas"></div>
+						</div>
+						<div id="track" class="tab-pane fade">
+							<!-- TCGA Toolbar - should be modified to be flexible -->
+							<div class="row-fluid">
+							<div class="span12" id="genomeBar">
+									<select id="chromosomeIds">
+									</select>
+									<a class="btn" href="#" id="zoomOut"><i class="icon-zoom-out icon-black"></i></a>
+									<div class="slider slider-horizontal" id="trackSlider" style="width: 140px;"></div>
+									<a class="btn" href="#" id="zoomIn"><i class="icon-zoom-in icon-black"></i></a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a class="btn" href="#" id="back"><i class="icon-backward icon-black"></i></a>
+									<a class="btn" href="#" id="play"><i class="icon-play icon-black"></i></a>
+									<a class="btn" href="#" id="stop"><i class="icon-stop icon-black"></i></a>
+									<a class="btn" href="#" id="front"><i class="icon-forward icon-black"></i></a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<select id="cancerTypes">
+									</select>
+									<select id="patientList">
+									</select>
+							</div>
+							</div>
+							<div class="row-fluid"><div class="span12" id="genomeTrackCanvas"></div>	</div>
+							
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="splashScreenExplorer">
+	<div class="container-fluid helpDivs" id="about" style="display:none">
+		<div class="row-fluid">
+			<div class="span12" style="text-align:center">
+				<hr>
+				<h1>About the Linked Cancer Genome Atlas (Linked TCGA) Dashboard</h1>
+				<p style="text-align:justify">
+				One of the most prominent challenges in delivering and using data-driven solutions for any type of human process is the provision 
+				of data visualization/summarization tools that are intuitive and easy to use for the experts at whom the datasets are targeted. 
+				Summarizing and displaying the evidence that these experts need for making informed decisions, reusing the results in new contexts 
+				and addressing their own challenges is the main task of such data visualization tools. The current method by which physicians look 
+				for information on the web is through peer-reviewed publications. However, with the indexing of over 10000 papers in PubMed every 
+				year, keeping current with the literature and using this knowledge to derive new research questions has become a herculean task. 
+				To facilitate the intuitive exploration of the information available in TCGA datasets and tumor-related publications, 
+				we have devised an interactive visual analytics platform, called the <b>Linked Cancer Genome Atlas Dashboard</b>. 
+				
+				<br>
+				The platform provides different perspectives to visualize the integrated datasets :- 
+				</p>
+				<ul style="text-align:justify"><li><b>Network Explorer</b> - Presents a force-directed network graph linking the different tumor topologies analysed in TCGA 
+				to the publication resources where more information about these publications can be discovered. </li>
+				<li><b>Genome Browser</b> - Presents an intuitive exploration interface for the visualization of the genomic datasets 
+				(DNA Methylation and Exon Expression) of TCGA cancer patients.
+				</li>
+				</ul>
+				<p style="text-align:justify">
+				In the future we plan to integrate additional perspectives namely the <a href='http://srvgal78.deri.ie/genomeSnip' target='blank'>Genomic Wheel</a>, to informatively isolate genomic segments of interest in cancer research, and a Geographical Viewer.
+				<br>
+				You could also search any mesh term or a publication, by typing in the Search Bar provided in the interface, which prompts all possible alternatives as you type ahead.
+				<br>
+				</p>
+				
+				<img src="img/LinkedTCGADashboard.jpg" style="border:1px solid black">
+			</div>
+		</div>
+	</div> 
+	
+	<div class="container-fluid helpDivs" id="persGenomeBrowser" style="display:none">
+		<div class="row-fluid">
+			<div class="span12" style="text-align:center">
+				<hr>
+				<h1>Perspective: Genome Browser</h1>
+				<p style="text-align:justify">
+					The Genome Browser perspective facilitates the cancer researcher to visualize the genomic datasets (DNA Methylation and Exon Expression) of the <a href='http://tcga.deri.ie' target='_blank'>Linked Cancer Genome Atlas</a> patients against the human genome (divided by the chromosomes). 
+					The user could select the chromosome for which he/she wishes to visualize the genomic datasets and the ideogrammatic representation of the selected chromosome is displayed in Track A. 
+					Ideograms are a schematic representation to depict staining patterns on a tightly-coiled chromosome. These Chromosome Bands (Ideograms) were downloaded from the Mapping and Sequencing Tracks Table in the Human Genome Assembly (GRCh37/hg19, Feb 2009), available at the <a href='http://genome.ucsc.edu/' target='_blank'>UCSC Genome Browser</a>
+					The coordinates and descriptions of the Protein-coding genes contained within this chromosome are retrieved from <a href='http://docs.bioinfo.cipf.es/projects/cellbase/wiki/' target='_blank'>CellBase</a>. 
+					These genes are annotated using the HGNC Nomenclature and the positions are indicated by start/stop attributes, and are visualized in Track B. 
+					Hovering above any gene provides additional information on this gene, as shown in Dialog F.
+				</p>
+				<p style="text-align:justify">
+					The cancer researcher has the option to select any tumor category and load the DNA methylation and the exon expression datasets of the patients diagnosed with that tumor using Control E. 
+					Selection of the patient executes queries against the corresponding TCGA endpoints and retrieves his sequencing results in real-time. 
+					These datasets are represented using bar charts shown in Track C and D (red and green) respectively, whose X-coordinates are mapped to the genomic coordinates of the chromosome and the Y-coordinates indicate the normalized beta value or the RKPM value at that chromosomal position. 
+					The researcher can select more than one patient for a comparative analysis, and the genomic datasets are stacked vertically. The Genome Browser perspective provides the basic features, for zooming and automatic scrolling across the length of the clicked chromosome. 
+				</p>
+				<img src="img/genomeBrowser.jpg" style="border:1px solid black">
+			</div>
+		</div>
+	</div> 
+	
+	<div class="container-fluid helpDivs" id="contactUs" style="display:none">
+		<div class="row-fluid">
+			<div class="span12" style="text-align:center">
+				<hr>
+				<h1>Feedback</h1>
+				<p style="text-align:justify">
+				If you find a bug or wish to provide suggestions regarding the Linked Cancer Genome Atlas Dashboard, please contact either
+				<a href="http://maulik-kamdar.com/" target='_blank'>Maulik R. Kamdar</a> (maulik.kamdar_AT_deri.org), 
+				<a href="https://sites.google.com/site/saleemsweb/" target='_blank'>Muhammad Saleem</a> (saleem_AT_informatik.uni-leipzig.de) or 
+				<a href="http://www.deri.ie/users/aftab-iqbal/" target='blank'>Aftab Iqbal</a> (aftab.iqbal_AT_deri.org).
+				<br><br>
+				The RDF datasets adhere to <a href="https://tcga-data.nci.nih.gov/docs/TCGA_Data_Use_Certification.pdf" target='_blank'>TCGA’s</a> copyright policy.<br>
+				For more information on the Linked Cancer Genome Atlas Project, please visit <a href='http://tcga.deri.ie' target='_blank'>http://tcga.deri.ie</a>
+				
+				</p>
+			</div>
+		</div>
+	</div> 
+	
+	<div class="container-fluid helpDivs" id="persNetworkExplorer" style="display:none">
+		<div class="row-fluid">
+			<div class="span12" style="text-align:center">
+				<hr>
+				<h1>Perspective: Network Explorer</h1>
+				<p style="text-align:justify">
+				The network explorer features a highly dense, force-directed network graph linking the different tumor topologies analysed in TCGA 
+				to the publication resources where more information about these tumors can be discovered. The graph is reduced on the selection of any publication or tumor node, with associated Mesh Terms being displayed for further selection.
+				The explorer allows the quick exploration of various publications by clicking on the connected nodes and traversing the graph. 
+				<br>Selecting a publication node presents the metadata of the publication (author, abstract, mesh terms, chemicals cited, etc.) and a link to the original PubMed page. 
+				
+				</p>
+				<img src="img/networkExplorer.jpg" style="border:1px solid black">
+			</div>
+		</div>
+	</div> 
+	
+	<div class="container-fluid helpDivs" id="persGeoViewer" style="display:none">
+		<div class="row-fluid">
+			<div class="span12" style="text-align:center">
+				<hr>
+				<h1>Perspective: Geographical Viewer</h1>
+				<p style="text-align:center">
+				This perspective is currently under development !! We hope to complete it soon !!
+				</p>
+			</div>
+		</div>
+	</div> 
+	
+	
+<!-- <div class="splashScreenExplorer">
   		<img src="img/loading-animation.gif"><img src="img/tcga_logo.png"><br>
   		<h2 align="center">Simulating. One moment please…</h2>
     </div>
+	-->
 	
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/d3.v3.min.js"></script>
-	<script src="js/forcegraph.js"></script>
-	<script src="js/nv.d3.js"></script>
-	<script src="js/tooltip.js"></script>
-	<script src="js/utils.js"></script>
-	<!--<script src="js/fisheye.js"></script>-->
-	<script src="js/models/legend.js"></script>
-	<script src="js/models/axis.js"></script>
-	<script src="js/models/distribution.js"></script>
-	<script src="js/models/scatter.js"></script>
-	<script src="js/models/scatterChart.js"></script>
-	<script src="js/methylationPlot.js"></script>
+	
+	<script type="text/javascript" src="js/search.js"> </script>
+	<script type="text/javascript" src="js/sigmaforce.js"></script>
+	<script type="text/javascript" src="js/genomeparser.js"></script>
+	<script type="text/javascript" src="js/genometrack.js"></script>
+	<script type="text/javascript" src="js/tcgaGenomeTrack.js"></script>
+	<script type="text/javascript" src="js/tcgaUI.js"></script>
 </body></html>

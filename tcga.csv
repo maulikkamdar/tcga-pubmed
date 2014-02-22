@@ -1,0 +1,39 @@
+tumor,type,endpoint,location,Label
+lgg,clinical,digital.path.uab.edu,UAB,Brain Lower Grade Glioma
+lusc,clinical,digital.path.uab.edu,UAB,Lung squamous cell carcinoma
+prad,clinical,digital.path.uab.edu,UAB,Prostate adenocarcinoma
+read,clinical,digital.path.uab.edu,UAB,Rectum adenocarcinoma
+skcm,clinical,digital.path.uab.edu,UAB,Skin Cutaneous Melanoma
+brca,clinical,digital.path.uab.edu,UAB,Breast invasive carcinoma
+dlbc,clinical,digital.path.uab.edu,UAB,Lymphoid Neoplasm Diffuse Large B-cell Lymphoma
+esca,clinical,digital.path.uab.edu,UAB,Esophageal carcinoma
+lgg,exon,digital2.path.uab.edu,UAB,Brain Lower Grade Glioma
+lusc,exon,digital2.path.uab.edu,UAB,Lung squamous cell carcinoma
+prad,exon,digital2.path.uab.edu,UAB,Prostate adenocarcinoma
+read,exon,digital2.path.uab.edu,UAB,Rectum adenocarcinoma
+skcm,exon,digital2.path.uab.edu,UAB,Skin Cutaneous Melanoma
+brca,exon,digital2.path.uab.edu,UAB,Breast invasive carcinoma
+lgg,meth,digital3.path.uab.edu,UAB,Brain Lower Grade Glioma
+lusc,meth,digital3.path.uab.edu,UAB,Lung squamous cell carcinoma
+prad,meth,digital3.path.uab.edu,UAB,Prostate adenocarcinoma
+read,meth,digital3.path.uab.edu,UAB,Rectum adenocarcinoma
+skcm,meth,digital3.path.uab.edu,UAB,Skin Cutaneous Melanoma
+acc,meth,digital3.path.uab.edu,UAB,Adrenocortical carcinoma
+brca,meth,digital3.path.uab.edu,UAB,Breast invasive carcinoma
+dlbc,meth,digital3.path.uab.edu,UAB,Lymphoid Neoplasm Diffuse Large B-cell Lymphoma
+esca,meth,digital3.path.uab.edu,UAB,Esophageal carcinoma
+blca,meth,http://vmlion14.deri.ie/node43/8082/sparql,DERI,Bladder Urothelial Carcinoma
+blca,exon,http://vmlion14.deri.ie/node43/8081/sparql,DERI,Bladder Urothelial Carcinoma
+blca,clinical,http://vmlion14.deri.ie/node42/8082/sparql,DERI,Bladder Urothelial Carcinoma
+cesc,meth,http://vmlion14.deri.ie/node43/8080/sparql,DERI,Cervical squamous cell carcinoma and endocervical adenocarcinoma
+cesc,exon,http://vmlion14.deri.ie/node43/8081/sparql,DERI,Cervical squamous cell carcinoma and endocervical adenocarcinoma
+cesc,clinical,http://vmlion14.deri.ie/node42/8081/sparql,DERI,Cervical squamous cell carcinoma and endocervical adenocarcinoma
+hnsc,meth,http://vmlion14.deri.ie/node44/8080/sparql,DERI,Head and Neck squamous cell carcinoma
+hnsc,exon,http://vmlion14.deri.ie/node44/8081/sparql,DERI,Head and Neck squamous cell carcinoma
+hnsc,clinical,http://vmlion14.deri.ie/node42/8082/sparql,DERI,Head and Neck squamous cell carcinoma
+kirp,meth,http://vmlion14.deri.ie/node45/8080/sparql,DERI,Kidney renal papillary cell carcinoma
+kirp,exon,http://vmlion14.deri.ie/node45/8081/sparql,DERI,Kidney renal papillary cell carcinoma
+kirp,clinical,http://vmlion14.deri.ie/node42/8082/sparql,DERI,Kidney renal papillary cell carcinoma
+laml,meth,http://vmlion14.deri.ie/node45/8082/sparql,DERI,Acute Myeloid Leukemia
+laml,exon,http://vmlion14.deri.ie/node44/8083/sparql,DERI,Acute Myeloid Leukemia
+laml,clinical,http://vmlion14.deri.ie/node42/8081/sparql,DERI,Acute Myeloid Leukemia
