@@ -1,0 +1,699 @@
+{
+    "nodes": [
+        {
+            "number": 0,
+            "name": "TopFed",
+            "url": "https://code.google.com/p/topfed/",
+            "color": "#9FB6CD",
+            "size": 20
+        },
+        {
+            "number": 1,
+            "name": "INSIGHT Center, National University of Ireland, Galway",
+            "url": "http://www.insight-centre.org/",
+            "color": "#FF7F24",
+            "size": 15
+        },
+        {
+            "number": 2,
+            "name": "University of Alabama, Birmingham",
+            "url": "http://www.uab.edu/home/",
+            "color": "#FF7F24",
+            "size": 15
+        },
+        {
+            "number": 3,
+            "name": "Brain Lower Grade Glioma",
+            "url": "http://tcga.deri.ie/graph/lgg",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 4,
+            "name": "",
+            "url": "http://digital.path.uab.edu/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        },
+        {
+            "number": 5,
+            "name": "Lung squamous cell carcinoma",
+            "url": "http://tcga.deri.ie/graph/lusc",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 6,
+            "name": "",
+            "url": "http://digital.path.uab.edu/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        },
+        {
+            "number": 7,
+            "name": "Prostate adenocarcinoma",
+            "url": "http://tcga.deri.ie/graph/prad",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 8,
+            "name": "",
+            "url": "http://digital.path.uab.edu/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        },
+        {
+            "number": 9,
+            "name": "Rectum adenocarcinoma",
+            "url": "http://tcga.deri.ie/graph/read",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 10,
+            "name": "",
+            "url": "http://digital.path.uab.edu/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        },
+        {
+            "number": 11,
+            "name": "Skin Cutaneous Melanoma",
+            "url": "http://tcga.deri.ie/graph/skcm",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 12,
+            "name": "",
+            "url": "http://digital.path.uab.edu/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        },
+        {
+            "number": 13,
+            "name": "Breast invasive carcinoma",
+            "url": "http://tcga.deri.ie/graph/brca",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 14,
+            "name": "",
+            "url": "http://digital.path.uab.edu/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        },
+        {
+            "number": 15,
+            "name": "Lymphoid Neoplasm Diffuse Large B-cell Lymphoma",
+            "url": "http://tcga.deri.ie/graph/dlbc",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 16,
+            "name": "",
+            "url": "http://digital.path.uab.edu/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        },
+        {
+            "number": 17,
+            "name": "Esophageal carcinoma",
+            "url": "http://tcga.deri.ie/graph/esca",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 18,
+            "name": "",
+            "url": "http://digital.path.uab.edu/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        },
+        {
+            "number": 19,
+            "name": "",
+            "url": "http://digital2.path.uab.edu/sparql",
+            "color": "#FFAEB9",
+            "bColor": "#FF69B4",
+            "size": 5
+        },
+        {
+            "number": 20,
+            "name": "",
+            "url": "http://digital2.path.uab.edu/sparql",
+            "color": "#FFAEB9",
+            "bColor": "#FF69B4",
+            "size": 5
+        },
+        {
+            "number": 21,
+            "name": "",
+            "url": "http://digital2.path.uab.edu/sparql",
+            "color": "#FFAEB9",
+            "bColor": "#FF69B4",
+            "size": 5
+        },
+        {
+            "number": 22,
+            "name": "",
+            "url": "http://digital2.path.uab.edu/sparql",
+            "color": "#FFAEB9",
+            "bColor": "#FF69B4",
+            "size": 5
+        },
+        {
+            "number": 23,
+            "name": "",
+            "url": "http://digital2.path.uab.edu/sparql",
+            "color": "#FFAEB9",
+            "bColor": "#FF69B4",
+            "size": 5
+        },
+        {
+            "number": 24,
+            "name": "",
+            "url": "http://digital2.path.uab.edu/sparql",
+            "color": "#FFAEB9",
+            "bColor": "#FF69B4",
+            "size": 5
+        },
+        {
+            "number": 25,
+            "name": "",
+            "url": "http://digital3.path.uab.edu/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 26,
+            "name": "",
+            "url": "http://digital3.path.uab.edu/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 27,
+            "name": "",
+            "url": "http://digital3.path.uab.edu/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 28,
+            "name": "",
+            "url": "http://digital3.path.uab.edu/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 29,
+            "name": "",
+            "url": "http://digital3.path.uab.edu/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 30,
+            "name": "Adrenocortical carcinoma",
+            "url": "http://tcga.deri.ie/graph/acc",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 31,
+            "name": "",
+            "url": "http://digital3.path.uab.edu/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 32,
+            "name": "",
+            "url": "http://digital3.path.uab.edu/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 33,
+            "name": "",
+            "url": "http://digital3.path.uab.edu/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 34,
+            "name": "",
+            "url": "http://digital3.path.uab.edu/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 35,
+            "name": "Bladder Urothelial Carcinoma",
+            "url": "http://tcga.deri.ie/graph/blca",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 36,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node43/8082/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 37,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node43/8081/sparql",
+            "color": "#FFAEB9",
+            "bColor": "#FF69B4",
+            "size": 5
+        },
+        {
+            "number": 38,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node42/8082/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        },
+        {
+            "number": 39,
+            "name": "Cervical squamous cell carcinoma and endocervical adenocarcinoma",
+            "url": "http://tcga.deri.ie/graph/cesc",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 40,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node43/8080/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 41,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node43/8081/sparql",
+            "color": "#FFAEB9",
+            "bColor": "#FF69B4",
+            "size": 5
+        },
+        {
+            "number": 42,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node42/8081/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        },
+        {
+            "number": 43,
+            "name": "Head and Neck squamous cell carcinoma",
+            "url": "http://tcga.deri.ie/graph/hnsc",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 44,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node44/8080/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 45,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node44/8081/sparql",
+            "color": "#FFAEB9",
+            "bColor": "#FF69B4",
+            "size": 5
+        },
+        {
+            "number": 46,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node42/8082/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        },
+        {
+            "number": 47,
+            "name": "Kidney renal papillary cell carcinoma",
+            "url": "http://tcga.deri.ie/graph/kirp",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 48,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node45/8080/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 49,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node45/8081/sparql",
+            "color": "#FFAEB9",
+            "bColor": "#FF69B4",
+            "size": 5
+        },
+        {
+            "number": 50,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node42/8082/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        },
+        {
+            "number": 51,
+            "name": "Acute Myeloid Leukemia",
+            "url": "http://tcga.deri.ie/graph/laml",
+            "color": "#ff0000",
+            "size": 10
+        },
+        {
+            "number": 52,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node45/8082/sparql",
+            "color": "#00FF7F",
+            "bColor": "#008B45",
+            "size": 5
+        },
+        {
+            "number": 53,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node44/8083/sparql",
+            "color": "#FFAEB9",
+            "bColor": "#FF69B4",
+            "size": 5
+        },
+        {
+            "number": 54,
+            "name": "",
+            "url": "http://vmlion14.deri.ie/node42/8081/sparql",
+            "color": "#87CEFA",
+            "bColor": "#1E90FF",
+            "size": 5
+        }
+    ],
+    "links": [
+        {
+            "number": 0,
+            "source": 0,
+            "target": 1
+        },
+        {
+            "number": 1,
+            "source": 0,
+            "target": 2
+        },
+        {
+            "number": 2,
+            "source": 2,
+            "target": 3
+        },
+        {
+            "number": 3,
+            "source": 3,
+            "target": 4
+        },
+        {
+            "number": 4,
+            "source": 2,
+            "target": 5
+        },
+        {
+            "number": 5,
+            "source": 5,
+            "target": 6
+        },
+        {
+            "number": 6,
+            "source": 2,
+            "target": 7
+        },
+        {
+            "number": 7,
+            "source": 7,
+            "target": 8
+        },
+        {
+            "number": 8,
+            "source": 2,
+            "target": 9
+        },
+        {
+            "number": 9,
+            "source": 9,
+            "target": 10
+        },
+        {
+            "number": 10,
+            "source": 2,
+            "target": 11
+        },
+        {
+            "number": 11,
+            "source": 11,
+            "target": 12
+        },
+        {
+            "number": 12,
+            "source": 2,
+            "target": 13
+        },
+        {
+            "number": 13,
+            "source": 13,
+            "target": 14
+        },
+        {
+            "number": 14,
+            "source": 2,
+            "target": 15
+        },
+        {
+            "number": 15,
+            "source": 15,
+            "target": 16
+        },
+        {
+            "number": 16,
+            "source": 2,
+            "target": 17
+        },
+        {
+            "number": 17,
+            "source": 17,
+            "target": 18
+        },
+        {
+            "number": 18,
+            "source": 3,
+            "target": 19
+        },
+        {
+            "number": 19,
+            "source": 5,
+            "target": 20
+        },
+        {
+            "number": 20,
+            "source": 7,
+            "target": 21
+        },
+        {
+            "number": 21,
+            "source": 9,
+            "target": 22
+        },
+        {
+            "number": 22,
+            "source": 11,
+            "target": 23
+        },
+        {
+            "number": 23,
+            "source": 13,
+            "target": 24
+        },
+        {
+            "number": 24,
+            "source": 3,
+            "target": 25
+        },
+        {
+            "number": 25,
+            "source": 5,
+            "target": 26
+        },
+        {
+            "number": 26,
+            "source": 7,
+            "target": 27
+        },
+        {
+            "number": 27,
+            "source": 9,
+            "target": 28
+        },
+        {
+            "number": 28,
+            "source": 11,
+            "target": 29
+        },
+        {
+            "number": 29,
+            "source": 2,
+            "target": 30
+        },
+        {
+            "number": 30,
+            "source": 30,
+            "target": 31
+        },
+        {
+            "number": 31,
+            "source": 13,
+            "target": 32
+        },
+        {
+            "number": 32,
+            "source": 15,
+            "target": 33
+        },
+        {
+            "number": 33,
+            "source": 17,
+            "target": 34
+        },
+        {
+            "number": 34,
+            "source": 1,
+            "target": 35
+        },
+        {
+            "number": 35,
+            "source": 35,
+            "target": 36
+        },
+        {
+            "number": 36,
+            "source": 35,
+            "target": 37
+        },
+        {
+            "number": 37,
+            "source": 35,
+            "target": 38
+        },
+        {
+            "number": 38,
+            "source": 1,
+            "target": 39
+        },
+        {
+            "number": 39,
+            "source": 39,
+            "target": 40
+        },
+        {
+            "number": 40,
+            "source": 39,
+            "target": 41
+        },
+        {
+            "number": 41,
+            "source": 39,
+            "target": 42
+        },
+        {
+            "number": 42,
+            "source": 1,
+            "target": 43
+        },
+        {
+            "number": 43,
+            "source": 43,
+            "target": 44
+        },
+        {
+            "number": 44,
+            "source": 43,
+            "target": 45
+        },
+        {
+            "number": 45,
+            "source": 43,
+            "target": 46
+        },
+        {
+            "number": 46,
+            "source": 1,
+            "target": 47
+        },
+        {
+            "number": 47,
+            "source": 47,
+            "target": 48
+        },
+        {
+            "number": 48,
+            "source": 47,
+            "target": 49
+        },
+        {
+            "number": 49,
+            "source": 47,
+            "target": 50
+        },
+        {
+            "number": 50,
+            "source": 1,
+            "target": 51
+        },
+        {
+            "number": 51,
+            "source": 51,
+            "target": 52
+        },
+        {
+            "number": 52,
+            "source": 51,
+            "target": 53
+        },
+        {
+            "number": 53,
+            "source": 51,
+            "target": 54
+        }
+    ]
+}

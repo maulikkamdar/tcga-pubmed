@@ -1,0 +1,92 @@
+[
+    {
+        "id": "laml",
+        "name": "Acute Myeloid Leukemia",
+		"color": "0,100,0",
+        "graph": "http://tcga.deri.ie/graph/laml",
+        "methNode": "http://vmlion14.deri.ie/node45/8082/sparql",
+        "exonNode": "http://vmlion14.deri.ie/node44/8083/sparql",
+        "clinicalNode": "http://vmlion14.deri.ie/node42/8081/sparql"
+    },
+    {
+        "id": "blca",
+        "name": "Bladder Urothelial Carcinoma",
+		"color": "128,0,0",
+        "graph": "http://tcga.deri.ie/graph/blca",
+        "methNode": "http://vmlion14.deri.ie/node43/8082/sparql",
+        "exonNode": "http://vmlion14.deri.ie/node43/8081/sparql",
+        "clinicalNode": "http://vmlion14.deri.ie/node42/8082/sparql"
+    },
+    {
+        "id": "cesc",
+        "name": "Cervical squamous cell carcinoma and endocervical adenocarcinoma",
+		"color": "255,215,0",
+        "graph": "http://tcga.deri.ie/graph/cesc",
+        "methNode": "http://vmlion14.deri.ie/node43/8080/sparql",
+        "exonNode": "http://vmlion14.deri.ie/node43/8081/sparql",
+        "clinicalNode": "http://vmlion14.deri.ie/node42/8081/sparql"
+    },
+    {
+        "id": "kirp",
+        "name": "Kidney renal papillary cell carcinoma",
+		"color": "0,255,127",
+        "graph": "http://tcga.deri.ie/graph/kirp",
+        "methNode": "http://vmlion14.deri.ie/node45/8080/sparql",
+        "exonNode": "http://vmlion14.deri.ie/node45/8081/sparql",
+        "clinicalNode": "http://vmlion14.deri.ie/node42/8082/sparql"
+    },
+    {
+        "id": "hnsc",
+        "name": "Head and Neck squamous cell carcinoma",
+		"color": "30,144,255",
+        "graph": "http://tcga.deri.ie/graph/hnsc",
+        "methNode": "http://vmlion14.deri.ie/node44/8080/sparql",
+        "exonNode": "http://vmlion14.deri.ie/node44/8081/sparql",
+        "clinicalNode": "http://vmlion14.deri.ie/node42/8082/sparql"
+    },
+    {
+        "id": "lgg",
+        "name": "Brain Lower Grade Glioma",
+		"color": "255,0,0",
+        "graph": "http://tcga.deri.ie/graph/lgg",
+        "methNode": "http://vmlion14.deri.ie/node44/8082/sparql",
+        "exonNode": "",
+        "clinicalNode": ""
+    },
+    {
+        "id": "prad",
+        "name": "Prostate adenocarcinoma",
+		"color": "153,50,204",
+        "graph": "http://tcga.deri.ie/graph/prad",
+        "methNode": "http://vmlion14.deri.ie/node44/8082/sparql",
+        "exonNode": "",
+        "clinicalNode": ""
+    },
+    {
+        "id": "lusc",
+        "name": "Lung squamous cell carcinoma",
+		"color": "184,134,11",
+        "graph": "http://tcga.deri.ie/graph/lusc",
+        "methNode": "http://vmlion14.deri.ie/node44/8082/sparql",
+        "exonNode": "",
+        "clinicalNode": ""
+    },
+    {
+        "id": "skcm",
+        "name": "Skin Cutaneous Melanoma",
+        "color": "255,20,147",
+        "graph": "http://tcga.deri.ie/graph/skcm",
+        "methNode": "http://vmlion14.deri.ie/node44/8082/sparql",
+        "exonNode": "",
+        "clinicalNode": ""
+    },
+    {
+        "id": "read",
+        "name": "Rectum adenocarcinoma",
+		"color": "0,0,205",
+        "graph": "http://tcga.deri.ie/graph/read",
+        "methNode": "http://vmlion14.deri.ie/node44/8082/sparql",
+        "exonNode": "",
+        "clinicalNode": ""
+    }
+]
